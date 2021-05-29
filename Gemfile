@@ -25,9 +25,20 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
+gem 'devise'  # ログイン機能
+gem 'devise_token_auth'  # トークン認証
+gem 'active_model_serializers', '~> 0.10.0'  # シリアライザー
+gem 'rails-i18n', '~> 6.0.0'  # 日本語化
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+  gem 'rspec-rails'   # Rails用のテストフレームワーク
+  gem 'factory_bot_rails'   # モデルに関するテストデータ作成用
+  gem 'faker'         # ダミーデータの生成
+  gem 'pry-byebug'    # デバッグ用
+  gem 'pry-doc'       # デバッグ用
 end
 
 group :development do
