@@ -25,7 +25,7 @@ class V1::PostsController < ApplicationController
     if @post.update(post_params)
       render json: @post
     else
-      render json: @post.errors, status: :unprocessable_entitiy
+      render json: @post.errors, status: :unprocessable_entity
     end
   end
 
